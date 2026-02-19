@@ -19,7 +19,7 @@ offset_right = 320.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=1201434855]
+[node name="MoneyLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=1201434855]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
