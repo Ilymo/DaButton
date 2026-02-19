@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://cu3ucntgxq3nd"]
 
+[ext_resource type="Script" uid="uid://bxntbp11vwywj" path="res://scene/game_manager.gd" id="1_itxqv"]
+
 [node name="Main" type="Node" unique_id=664207025]
+script = ExtResource("1_itxqv")
 
 [node name="UI" type="Control" parent="." unique_id=1179282494]
 layout_mode = 3
@@ -24,6 +27,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MoneyLabel" type="RichTextLabel" parent="UI/VBoxContainer" unique_id=1201434855]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
