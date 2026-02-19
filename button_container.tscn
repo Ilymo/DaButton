@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cu3ucntgxq3nd"]
+
+[node name="Control" type="Control" unique_id=1947827815]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DaButtonContainer" type="VBoxContainer" parent="." unique_id=220840509]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = 125.0
+offset_right = 48.0
+offset_bottom = -120.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="DaButton1" type="Button" parent="DaButtonContainer" unique_id=1736397457]
+layout_mode = 2
+size_flags_vertical = 6
+text = "DaButton 1"
+
+[node name="DaButton2" type="Button" parent="DaButtonContainer" unique_id=2054821629]
+layout_mode = 2
+size_flags_vertical = 6
+text = "DaButton 2"
+
+[node name="DaButton3" type="Button" parent="DaButtonContainer" unique_id=516809835]
+layout_mode = 2
+size_flags_vertical = 6
+text = "DaButton 3"
+
+[node name="DaButton4" type="Button" parent="DaButtonContainer" unique_id=590722040]
+layout_mode = 2
+size_flags_vertical = 6
+text = "DaButton 4"
