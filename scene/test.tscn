@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cyiv1ey3d126j"]
+
+[ext_resource type="Script" uid="uid://ti7xdt6y0yut" path="res://script/dabutton_animator.gd" id="1_fghjm"]
+
+[node name="Control" type="Control" unique_id=682502468]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="." unique_id=942288331]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.5
+offset_top = -39.5
+offset_right = 98.5
+offset_bottom = 39.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "TEST"
+
+[node name="DaButtonAnimator" type="Node" parent="Button" unique_id=983485052]
+script = ExtResource("1_fghjm")
+metadata/_custom_type_script = "uid://ti7xdt6y0yut"
