@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c68m3ocduotos"]
+
+[ext_resource type="Script" uid="uid://dn8m60frhfiij" path="res://script/unlock_button.gd" id="1_0uc3m"]
+
+[node name="UnlockButton" type="Button" unique_id=422155912]
+custom_minimum_size = Vector2(200, 100)
+text = "UNLOCK DA2"
+script = ExtResource("1_0uc3m")
+
+[node name="UnlockCost" type="Label" parent="." unique_id=276840539]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Cost:"
+horizontal_alignment = 1
+vertical_alignment = 1

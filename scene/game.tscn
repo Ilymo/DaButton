@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbxfhg1q6ewbf"]
+
+[ext_resource type="Script" uid="uid://bhilbyt67cav" path="res://script/game_controler.gd" id="1_p1ry8"]
+[ext_resource type="PackedScene" uid="uid://cqrajr3fhs77e" path="res://scene/up_grade_button.tscn" id="2_xwcet"]
+[ext_resource type="PackedScene" uid="uid://c68m3ocduotos" path="res://scene/unlock_button.tscn" id="3_xwcet"]
+[ext_resource type="PackedScene" uid="uid://ciaenivvk8sw2" path="res://scene/da_button.tscn" id="5_xlg7c"]
+
+[node name="Game" type="Control" node_paths=PackedStringArray("money")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p1ry8")
+money = NodePath("Money")
+
+[node name="Money" type="Label" parent="."]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+text = "$ 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UpgradeContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -276.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="UpGradeButton" parent="UpgradeContainer" instance=ExtResource("2_xwcet")]
+layout_mode = 2
+
+[node name="UnlockButton" parent="UpgradeContainer" instance=ExtResource("3_xwcet")]
+layout_mode = 2
+
+[node name="DaButtonContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -170.0
+offset_top = 99.0
+offset_right = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DaButton" parent="DaButtonContainer" instance=ExtResource("5_xlg7c")]
+layout_mode = 2

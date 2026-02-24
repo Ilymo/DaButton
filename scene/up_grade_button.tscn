@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cqrajr3fhs77e"]
+
+[ext_resource type="Script" uid="uid://dd1dqakmx40pm" path="res://script/upgrade_button.gd" id="1_7hk17"]
+
+[node name="UpGradeButton" type="Button" unique_id=1422154703]
+custom_minimum_size = Vector2(200, 100)
+text = "UPGRADE Da1"
+script = ExtResource("1_7hk17")
+
+[node name="Cost" type="Label" parent="." unique_id=1151611092]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Cost: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
