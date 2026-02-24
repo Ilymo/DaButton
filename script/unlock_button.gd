@@ -3,8 +3,10 @@ extends Button
 @onready var root_node: Node = get_tree().root.get_child(1)
 @onready var unlock_cost: Label = $UnlockCost
 
-
-var target_button: String = "DaButton2"
+# target_index from datamanager is the suffix added after "DaButton" starting from 2 to 4
+#used to generate next unlock button
+var current_target_index = DataManager.target_index
+@export var target_button: String = "DaButton" + str(current_target_index)
 
 func _ready() -> void:
 	#connect to the signal emited when current money change
@@ -13,7 +15,7 @@ func _ready() -> void:
 	update_cost_label()
 	self.pressed.connect(root_node.unlock_dabutton.bind(target_button))
 	self.pressed.connect(root_node.unlock_upgrade_button.bind(target_button))
-	self.pressed.connect(root_node.next_unlock.bind(target_button))
+	self.pressed.connect(root_node.next_unlock)
 	self.pressed.connect(queue_free)
 
 func update_cost_label() -> void:

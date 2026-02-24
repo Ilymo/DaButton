@@ -40,9 +40,11 @@ grow_vertical = 2
 
 [node name="UpGradeButton" parent="UpgradeContainer" instance=ExtResource("2_xwcet")]
 layout_mode = 2
+text = "UPGRADE DaButton 1"
 
 [node name="UnlockButton" parent="UpgradeContainer" instance=ExtResource("3_xwcet")]
 layout_mode = 2
+text = "UNLOCK DaButton2"
 
 [node name="DaButtonContainer" type="VBoxContainer" parent="."]
 layout_mode = 1

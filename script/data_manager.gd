@@ -7,12 +7,17 @@ var current_money: int = 0:
 		current_money = new_money
 		current_money_changed.emit()
 
+#target index use at sufix to generate unlock button
+var target_index: int = 2
+#maximum unlockable button
+var max_target_index: int = 4
+
 var button_property: Dictionary = {
 	"DaButton1": {
 		"coef": 1.10,
 		
 		"lvl": 1,
-		"earn": 1,
+		"earn": 10,
 		"up_cost": 10,
 		},
 		
@@ -43,6 +48,21 @@ var button_property: Dictionary = {
 		"cooldown": 3.0,
 		"cd_cost": 1100,
 		#unlock:
-		"unlock_cost": 200 #to change
+		"unlock_cost": 300 #to change
+	},
+	
+	"DaButton4": {
+		#multiplier:
+		"coef": 1.20,
+		#upgrade :
+		"lvl": 1,
+		"earn": 400,
+		"up_cost": 4000,
+		#cooldown:
+		"cd_lvl": 1,
+		"cooldown": 3.0,
+		"cd_cost": 4100,
+		#unlock:
+		"unlock_cost": 400 #to change
 	}
 }

@@ -3,12 +3,11 @@
 [ext_resource type="Script" uid="uid://dn8m60frhfiij" path="res://script/unlock_button.gd" id="1_0uc3m"]
 
 [node name="UnlockButton" type="Button"]
-custom_minimum_size = Vector2(200, 100)
+custom_minimum_size = Vector2(200, 50)
 text = "UNLOCK DA2"
 script = ExtResource("1_0uc3m")
 
 [node name="UnlockCost" type="Label" parent="."]
-custom_minimum_size = Vector2(0, 50)
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0

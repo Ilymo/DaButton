@@ -78,15 +78,21 @@ func unlock_upgrade_button(button_name: String) -> void:
 	new_upgrade_button.target_button = button_name
 	new_cooldown_button.target_button = button_name
 	
-	new_upgrade_button.text = "Upgrade" + button_name
-	new_cooldown_button.text = "Reduce CD of " + button_name
+	new_upgrade_button.text = "UPGRADE " + button_name
+	new_cooldown_button.text = "REDUCE CD of " + button_name
 	
 	upgrade_container.add_child(new_upgrade_button)
 	upgrade_container.add_child(new_cooldown_button)
 
 #func unlock a voir, maybe use un index quelque pars
-func next_unlock(button_name: String) -> void:
+func next_unlock() -> void:
+	# increase target_index that add after "DaButton" to instantiate new unlock button
+	# return if target_index = max button
+	if DataManager.target_index < DataManager.max_target_index:
+		DataManager.target_index += 1
+	else:
+		return
+	#instantiate new unlock button if max dabutton not reached
 	var new_unlock_button = UNLOCK_BUTTON.instantiate()
-	new_unlock_button.target_button = button_name
-	new_unlock_button.text = "Unlock " + button_name
+	new_unlock_button.text = "UNLOCK " + new_unlock_button.target_button
 	upgrade_container.add_child(new_unlock_button)
