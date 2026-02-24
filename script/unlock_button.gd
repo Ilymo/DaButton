@@ -3,7 +3,8 @@ extends Button
 @onready var root_node: Node = get_tree().root.get_child(1)
 @onready var unlock_cost: Label = $UnlockCost
 
-@export var target_button: String = "DaButton2"
+
+var target_button: String = "DaButton2"
 
 func _ready() -> void:
 	#connect to the signal emited when current money change

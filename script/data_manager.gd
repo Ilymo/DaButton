@@ -12,8 +12,8 @@ var button_property: Dictionary = {
 		"coef": 1.10,
 		
 		"lvl": 1,
-		"earn": 10,
-		"up_cost": 100,
+		"earn": 1,
+		"up_cost": 10,
 		},
 		
 	"DaButton2": {
@@ -21,8 +21,8 @@ var button_property: Dictionary = {
 		"coef": 1.20,
 		#upgrade :
 		"lvl": 1,
-		"earn": 100,
-		"up_cost": 1000,
+		"earn": 20,
+		"up_cost": 200,
 		#cooldown:
 		"cd_lvl": 1,
 		"cooldown": 3.0,
@@ -36,8 +36,8 @@ var button_property: Dictionary = {
 		"coef": 1.20,
 		#upgrade :
 		"lvl": 1,
-		"earn": 1000,
-		"up_cost": 2000,
+		"earn": 300,
+		"up_cost": 3000,
 		#cooldown:
 		"cd_lvl": 1,
 		"cooldown": 3.0,

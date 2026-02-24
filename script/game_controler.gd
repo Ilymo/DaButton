@@ -1,6 +1,6 @@
 extends Control
 
-@export var money: Label
+@onready var money: Label = $Money
 @onready var da_button_container: VBoxContainer = $DaButtonContainer
 @onready var upgrade_container: VBoxContainer = $UpgradeContainer
 
