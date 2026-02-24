@@ -29,12 +29,12 @@ func _ready() -> void:
 	button.pivot_offset_ratio = Vector2(0.5, 0.5)
 	button.mouse_entered.connect(hover_animation.bind(true))
 	button.mouse_exited.connect(hover_animation.bind(false))
-	#button.button_down.connect(_on_button_pressed)
+	button.button_down.connect(_on_button_pressed)
 	
 
-#func _on_button_pressed() -> void:
-	#scale_animation()
-	#rotation_animation()
+func _on_button_pressed() -> void:
+	scale_animation()
+	rotation_animation()
 
 ## Hover button animation, take a bool true if hovered, false if not
 func hover_animation(hovered: bool) -> void:
