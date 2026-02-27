@@ -1,13 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://cyr6d0wqdib7h"]
+[gd_scene format=3 uid="uid://cyr6d0wqdib7h"]
 
 [ext_resource type="Script" uid="uid://cklljxxonwwx" path="res://script/cooldown_button.gd" id="1_0mjyf"]
 
-[node name="CooldownButton" type="Button"]
-custom_minimum_size = Vector2(200, 50)
+[node name="CooldownButton" type="Button" unique_id=2026820248]
+custom_minimum_size = Vector2(200, 75)
 text = "COOLDOWN Da2"
 script = ExtResource("1_0mjyf")
 
-[node name="CooldownCost" type="Label" parent="."]
+[node name="CooldownCost" type="Label" parent="." unique_id=1198496816]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0

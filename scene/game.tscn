@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cbxfhg1q6ewbf"]
 
 [ext_resource type="Script" uid="uid://bhilbyt67cav" path="res://script/game_controler.gd" id="1_p1ry8"]
+[ext_resource type="FontFile" uid="uid://dsrwwsxdpeur8" path="res://asset/brushstr.ttf" id="1_ym5sv"]
 [ext_resource type="Shader" uid="uid://dyuwxi2v7ws0c" path="res://asset/background.gdshader" id="2_xlg7c"]
 [ext_resource type="PackedScene" uid="uid://cqrajr3fhs77e" path="res://scene/up_grade_button.tscn" id="2_xwcet"]
 [ext_resource type="Texture2D" uid="uid://crl11jr4eppsb" path="res://asset/bubbles.png" id="3_qpk70"]
@@ -10,6 +11,10 @@
 [ext_resource type="Theme" uid="uid://d3xpjh6m3lol2" path="res://asset/stylebox/DaButton2/theme2.tres" id="8_ll5lq"]
 [ext_resource type="Theme" uid="uid://cuy8lkno7njke" path="res://asset/stylebox/DaButton3/theme3.tres" id="9_17rxn"]
 [ext_resource type="Theme" uid="uid://d3vqjlg1d8bfn" path="res://asset/stylebox/DaButton4/theme4.tres" id="10_yq8tf"]
+
+[sub_resource type="Theme" id="Theme_sng2h"]
+Button/fonts/font = ExtResource("1_ym5sv")
+Label/fonts/font = ExtResource("1_ym5sv")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ll5lq"]
 shader = ExtResource("2_xlg7c")
@@ -28,6 +33,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_sng2h")
 script = ExtResource("1_p1ry8")
 
 [node name="Background" type="CanvasLayer" parent="." unique_id=1996470844]
