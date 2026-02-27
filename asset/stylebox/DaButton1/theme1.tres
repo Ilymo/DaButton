@@ -4,6 +4,9 @@
 [ext_resource type="StyleBox" uid="uid://bgfdae2nvwmer" path="res://asset/stylebox/DaButton1/hover1.tres" id="1_fcve8"]
 [ext_resource type="StyleBox" uid="uid://guik1hc7xbi0" path="res://asset/stylebox/DaButton1/normal1.tres" id="2_2i7d4"]
 [ext_resource type="StyleBox" uid="uid://c87siencp7rjx" path="res://asset/stylebox/DaButton1/pressed1.tres" id="3_u4jny"]
+[ext_resource type="StyleBox" uid="uid://c6mdb8mt3uxc" path="res://asset/stylebox/DaButton1/progress_bar1.tres" id="5_u4jny"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c8dq7"]
 
 [resource]
 Button/colors/font_color = Color(0.27450982, 0.25882354, 0.36862746, 1)
@@ -14,3 +17,5 @@ Button/styles/disabled = ExtResource("1_2i7d4")
 Button/styles/hover = ExtResource("1_fcve8")
 Button/styles/normal = ExtResource("2_2i7d4")
 Button/styles/pressed = ExtResource("3_u4jny")
+ProgressBar/styles/background = SubResource("StyleBoxEmpty_c8dq7")
+ProgressBar/styles/fill = ExtResource("5_u4jny")

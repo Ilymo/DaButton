@@ -4,9 +4,14 @@
 [ext_resource type="StyleBox" uid="uid://muixp2g887qr" path="res://asset/stylebox/DaButton4/hover4.tres" id="2_dbwdr"]
 [ext_resource type="StyleBox" uid="uid://g65kwbre8ox" path="res://asset/stylebox/DaButton4/normal4.tres" id="3_crij2"]
 [ext_resource type="StyleBox" uid="uid://b7pt4y08sd8n3" path="res://asset/stylebox/DaButton4/pressed4.tres" id="4_qfq1p"]
+[ext_resource type="StyleBox" uid="uid://vb3x5ycaf24o" path="res://asset/stylebox/DaButton4/progress_bar4.tres" id="5_dbwdr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_crij2"]
 
 [resource]
 Button/styles/disabled = ExtResource("1_4r26k")
 Button/styles/hover = ExtResource("2_dbwdr")
 Button/styles/normal = ExtResource("3_crij2")
 Button/styles/pressed = ExtResource("4_qfq1p")
+ProgressBar/styles/background = SubResource("StyleBoxEmpty_crij2")
+ProgressBar/styles/fill = ExtResource("5_dbwdr")

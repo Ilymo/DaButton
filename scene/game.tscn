@@ -13,8 +13,8 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ll5lq"]
 shader = ExtResource("2_xlg7c")
-shader_parameter/bottom_color = Color(0.27450982, 0.25882354, 0.36862746, 1)
-shader_parameter/top_color = Color(1, 0.4117647, 0.4509804, 1)
+shader_parameter/bottom_color = Color(0.40392157, 0.3764706, 0.5411765, 1)
+shader_parameter/top_color = Color(1, 0.6117647, 0.63529414, 1)
 shader_parameter/tex = ExtResource("3_qpk70")
 shader_parameter/layer_count = 6
 shader_parameter/time_scale = 0.050000002375
@@ -62,12 +62,13 @@ anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -209.0
-offset_top = 3.0
-offset_right = -4.0
-offset_bottom = -3.0
+offset_left = -214.0
+offset_top = 12.0
+offset_right = -9.0
+offset_bottom = -12.0
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_constants/separation = 15
 
 [node name="UpGradeButton" parent="UpgradeContainer" unique_id=1783785731 instance=ExtResource("2_xwcet")]
 layout_mode = 2
@@ -101,7 +102,6 @@ theme = ExtResource("7_ym5sv")
 [node name="DaButton2" parent="DaButtonContainer" unique_id=1486820671 instance=ExtResource("5_xlg7c")]
 visible = false
 layout_mode = 2
-theme = ExtResource("8_ll5lq")
 
 [node name="DaButton3" parent="DaButtonContainer" unique_id=1876840140 instance=ExtResource("5_xlg7c")]
 visible = false
