@@ -68,6 +68,8 @@ func unlock_dabutton(button_name: String) -> void:
 	var new_dabutton = DA_BUTTON.instantiate()
 	new_dabutton.target_button = button_name
 	new_dabutton.text = button_name
+	#change theme:
+	new_dabutton.theme = DataManager.button_property[button_name]["theme"]
 	da_button_container.add_child(new_dabutton)
 
 
@@ -80,6 +82,10 @@ func unlock_upgrade_button(button_name: String) -> void:
 	
 	new_upgrade_button.text = "UPGRADE " + button_name
 	new_cooldown_button.text = "REDUCE CD of " + button_name
+	
+	#change theme:
+	new_upgrade_button.theme = DataManager.button_property[button_name]["theme"]
+	new_cooldown_button.theme = DataManager.button_property[button_name]["theme"]
 	
 	upgrade_container.add_child(new_upgrade_button)
 	upgrade_container.add_child(new_cooldown_button)
@@ -95,4 +101,6 @@ func next_unlock() -> void:
 	#instantiate new unlock button if max dabutton not reached
 	var new_unlock_button = UNLOCK_BUTTON.instantiate()
 	new_unlock_button.text = "UNLOCK " + new_unlock_button.target_button
+	#change theme:
+	new_unlock_button.theme = DataManager.button_property[new_unlock_button.target_button]["theme"]
 	upgrade_container.add_child(new_unlock_button)

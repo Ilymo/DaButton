@@ -1,9 +1,25 @@
 [gd_scene format=3 uid="uid://cbxfhg1q6ewbf"]
 
 [ext_resource type="Script" uid="uid://bhilbyt67cav" path="res://script/game_controler.gd" id="1_p1ry8"]
+[ext_resource type="Shader" uid="uid://dyuwxi2v7ws0c" path="res://asset/background.gdshader" id="2_xlg7c"]
 [ext_resource type="PackedScene" uid="uid://cqrajr3fhs77e" path="res://scene/up_grade_button.tscn" id="2_xwcet"]
+[ext_resource type="Texture2D" uid="uid://crl11jr4eppsb" path="res://asset/bubbles.png" id="3_qpk70"]
 [ext_resource type="PackedScene" uid="uid://c68m3ocduotos" path="res://scene/unlock_button.tscn" id="3_xwcet"]
 [ext_resource type="PackedScene" uid="uid://ciaenivvk8sw2" path="res://scene/da_button.tscn" id="5_xlg7c"]
+[ext_resource type="Theme" uid="uid://xj7a6e16yhyu" path="res://asset/stylebox/DaButton1/theme1.tres" id="7_ym5sv"]
+[ext_resource type="Theme" uid="uid://d3xpjh6m3lol2" path="res://asset/stylebox/DaButton2/theme2.tres" id="8_ll5lq"]
+[ext_resource type="Theme" uid="uid://cuy8lkno7njke" path="res://asset/stylebox/DaButton3/theme3.tres" id="9_17rxn"]
+[ext_resource type="Theme" uid="uid://d3vqjlg1d8bfn" path="res://asset/stylebox/DaButton4/theme4.tres" id="10_yq8tf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ll5lq"]
+shader = ExtResource("2_xlg7c")
+shader_parameter/bottom_color = Color(0.27450982, 0.25882354, 0.36862746, 1)
+shader_parameter/top_color = Color(1, 0.4117647, 0.4509804, 1)
+shader_parameter/tex = ExtResource("3_qpk70")
+shader_parameter/layer_count = 6
+shader_parameter/time_scale = 0.050000002375
+shader_parameter/base_intensity = 0.14000000665
+shader_parameter/size = 0.7000100332497501
 
 [node name="Game" type="Control" unique_id=911635858]
 layout_mode = 3
@@ -13,6 +29,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_p1ry8")
+
+[node name="Background" type="CanvasLayer" parent="." unique_id=1996470844]
+layer = -1
+
+[node name="Panel" type="Panel" parent="Background" unique_id=1221012879]
+material = SubResource("ShaderMaterial_ll5lq")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Money" type="Label" parent="." unique_id=664772266]
 custom_minimum_size = Vector2(200, 100)
@@ -24,6 +51,7 @@ offset_left = -100.0
 offset_right = 100.0
 offset_bottom = 100.0
 grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
 text = "$ 0"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -34,29 +62,53 @@ anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -276.0
+offset_left = -209.0
+offset_top = 3.0
+offset_right = -4.0
+offset_bottom = -3.0
 grow_horizontal = 0
 grow_vertical = 2
 
 [node name="UpGradeButton" parent="UpgradeContainer" unique_id=1783785731 instance=ExtResource("2_xwcet")]
 layout_mode = 2
+theme = ExtResource("7_ym5sv")
 text = "UPGRADE DaButton 1"
 
 [node name="UnlockButton" parent="UpgradeContainer" unique_id=1726843335 instance=ExtResource("3_xwcet")]
 layout_mode = 2
+theme = ExtResource("8_ll5lq")
 text = "UNLOCK DaButton2"
 
 [node name="DaButtonContainer" type="VBoxContainer" parent="." unique_id=506715371]
 layout_mode = 1
-anchors_preset = 13
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
+anchor_bottom = 0.5
 offset_left = -170.0
-offset_top = 99.0
+offset_top = -238.0
 offset_right = 170.0
+offset_bottom = 238.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 25
 
 [node name="DaButton" parent="DaButtonContainer" unique_id=793015781 instance=ExtResource("5_xlg7c")]
 layout_mode = 2
+theme = ExtResource("7_ym5sv")
+
+[node name="DaButton2" parent="DaButtonContainer" unique_id=1486820671 instance=ExtResource("5_xlg7c")]
+visible = false
+layout_mode = 2
+theme = ExtResource("8_ll5lq")
+
+[node name="DaButton3" parent="DaButtonContainer" unique_id=1876840140 instance=ExtResource("5_xlg7c")]
+visible = false
+layout_mode = 2
+theme = ExtResource("9_17rxn")
+
+[node name="DaButton4" parent="DaButtonContainer" unique_id=1746976342 instance=ExtResource("5_xlg7c")]
+visible = false
+layout_mode = 2
+theme = ExtResource("10_yq8tf")
