@@ -1,0 +1,9 @@
+[gd_resource type="Theme" format=3 uid="uid://b7k4c3l8ystqj"]
+
+[ext_resource type="FontFile" uid="uid://dsrwwsxdpeur8" path="res://asset/brushstr.ttf" id="1_8jb7k"]
+
+[resource]
+Button/fonts/font = ExtResource("1_8jb7k")
+Label/colors/font_outline_color = Color(0.27450982, 0.25882354, 0.36862746, 1)
+Label/constants/outline_size = 5
+Label/fonts/font = ExtResource("1_8jb7k")

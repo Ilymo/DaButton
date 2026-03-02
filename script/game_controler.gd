@@ -13,7 +13,7 @@ const UNLOCK_BUTTON = preload("uid://c68m3ocduotos")
 
 func update_money(amount: int) -> void:
 	DataManager.current_money = amount
-	money.text = str(DataManager.current_money)
+	money.text = "$" + str(DataManager.current_money)
 
 
 #on da button pressed: current_money - amount(=base_earn * lvl)

@@ -1,29 +1,33 @@
 [gd_scene format=3 uid="uid://ciaenivvk8sw2"]
 
 [ext_resource type="Script" uid="uid://bot4kxpq25f07" path="res://script/da_button.gd" id="1_x8j4h"]
+[ext_resource type="Script" uid="uid://ti7xdt6y0yut" path="res://script/dabutton_animator.gd" id="2_cqttw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cqttw"]
+bg_color = Color(0.6, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="DaButton" type="Button" unique_id=1486820671]
 custom_minimum_size = Vector2(200, 100)
 text = "CLICK DA1"
 script = ExtResource("1_x8j4h")
 
-[node name="Earn" type="Label" parent="." unique_id=61248286]
-custom_minimum_size = Vector2(0, 50)
+[node name="Mask" type="Panel" parent="." unique_id=1270227801]
+show_behind_parent = true
+clip_children = 1
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -23.0
 grow_horizontal = 2
-grow_vertical = 0
-text = "Earn: 10"
-horizontal_alignment = 1
-vertical_alignment = 1
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cqttw")
 
-[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1729403046]
-show_behind_parent = true
-z_index = -1
+[node name="ProgressBar" type="ProgressBar" parent="Mask" unique_id=1729403046]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,3 +38,22 @@ mouse_filter = 2
 value = 100.0
 fill_mode = 3
 show_percentage = false
+
+[node name="Earn" type="Label" parent="." unique_id=61248286]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Earn: 10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DaButtonAnimator" type="Node" parent="." unique_id=1282589787]
+script = ExtResource("2_cqttw")
+rotation_amount = 10.0
+metadata/_custom_type_script = "uid://ti7xdt6y0yut"

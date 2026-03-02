@@ -59,7 +59,7 @@ var button_property: Dictionary = {
 		"coef": 1.20,
 		#upgrade :
 		"lvl": 1,
-		"earn": 400,
+		"earn": 4000,
 		"up_cost": 4000,
 		#cooldown:
 		"cd_lvl": 1,
