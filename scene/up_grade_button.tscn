@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cqrajr3fhs77e"]
 
 [ext_resource type="Script" uid="uid://dd1dqakmx40pm" path="res://script/upgrade_button.gd" id="1_7hk17"]
+[ext_resource type="Script" uid="uid://ti7xdt6y0yut" path="res://script/dabutton_animator.gd" id="2_ofu40"]
 
 [node name="UpGradeButton" type="Button" unique_id=1185915474]
 custom_minimum_size = Vector2(200, 75)
@@ -19,3 +20,7 @@ grow_vertical = 0
 text = "Cost: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="DaButtonAnimator" type="Node" parent="." unique_id=1256221169]
+script = ExtResource("2_ofu40")
+metadata/_custom_type_script = "uid://ti7xdt6y0yut"

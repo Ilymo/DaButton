@@ -3,6 +3,7 @@ extends Control
 @onready var money: Label = $Money
 @onready var da_button_container: VBoxContainer = $DaButtonContainer
 @onready var upgrade_container: VBoxContainer = $UpgradeContainer
+@onready var da_final_button: Button = $DaFinalButton
 
 
 const DA_BUTTON = preload("uid://ciaenivvk8sw2")
@@ -14,7 +15,6 @@ const UNLOCK_BUTTON = preload("uid://c68m3ocduotos")
 func update_money(amount: int) -> void:
 	DataManager.current_money = amount
 	money.text = "$" + str(DataManager.current_money)
-
 
 #on da button pressed: current_money - amount(=base_earn * lvl)
 #update money with new money amount

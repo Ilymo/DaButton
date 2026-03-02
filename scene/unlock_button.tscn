@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c68m3ocduotos"]
 
 [ext_resource type="Script" uid="uid://dn8m60frhfiij" path="res://script/unlock_button.gd" id="1_0uc3m"]
+[ext_resource type="Script" uid="uid://ti7xdt6y0yut" path="res://script/dabutton_animator.gd" id="2_s5x52"]
 
 [node name="UnlockButton" type="Button" unique_id=701220245]
 custom_minimum_size = Vector2(200, 75)
@@ -19,3 +20,7 @@ grow_vertical = 0
 text = "Cost:"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="DaButtonAnimator" type="Node" parent="." unique_id=461570005]
+script = ExtResource("2_s5x52")
+metadata/_custom_type_script = "uid://ti7xdt6y0yut"

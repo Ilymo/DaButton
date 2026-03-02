@@ -1,14 +1,20 @@
 extends Button
 
-var jiggle_duration: int = 2
+@onready var gpu_particles_2d: GPUParticles2D = $GPUParticles2D
+
 
 func _ready() -> void:
-	play_jiggle()
-	
-func play_jiggle() -> void:
-	pivot_offset_ratio = Vector2(0.5, 0.5)
-	var position_test:= global_position
-	var jiggle_tween = create_tween().set_loops().set_ease(Tween.EASE_IN_OUT)
-	jiggle_tween.tween_property(self, "position", position_test + Vector2(1, 1.05), jiggle_duration / 2)
-	jiggle_tween.tween_property(self, "position", position_test - Vector2(1, 1.05), jiggle_duration / 2)
-	
+	DataManager.current_money_changed.connect(unlock_final)
+	self.pressed.connect(end_animation)
+
+
+func end_animation() -> void:
+	gpu_particles_2d.emitting = true
+
+func unlock_final() -> void:
+	#tempo a mettre dans datamanager
+	var final_cost: int = 1000
+	if DataManager.current_money >= final_cost:
+		self.disabled = false
+	else:
+		self.disabled = true

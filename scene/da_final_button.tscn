@@ -1,12 +1,39 @@
 [gd_scene format=3 uid="uid://c0rq6rdrsuolh"]
 
 [ext_resource type="Theme" uid="uid://bj5ugp2mkep37" path="res://asset/stylebox/FinalButton/final_button_theme.tres" id="1_8bsbu"]
+[ext_resource type="Script" uid="uid://df1bhfj81uvol" path="res://script/da_final_button.gd" id="2_4uigg"]
+[ext_resource type="Texture2D" uid="uid://m7fgx67rrgoj" path="res://asset/New Piskel.png" id="3_ma6lc"]
+
+[sub_resource type="Curve" id="Curve_ueaxx"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.20224726), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_h8bte"]
+curve = SubResource("Curve_ueaxx")
+
+[sub_resource type="Curve" id="Curve_fwm08"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.3370787), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_3gtsc"]
+curve = SubResource("Curve_fwm08")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2vlaa"]
+particle_flag_disable_z = true
+direction = Vector3(1, -1, 0)
+spread = 180.0
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+gravity = Vector3(0, 300, 0)
+scale_curve = SubResource("CurveTexture_3gtsc")
+alpha_curve = SubResource("CurveTexture_h8bte")
 
 [node name="DaFinalButton" type="Button" unique_id=1165392322]
 offset_right = 250.0
 offset_bottom = 250.0
 theme = ExtResource("1_8bsbu")
 text = "DA FINAL BUTTON"
+script = ExtResource("2_4uigg")
 
 [node name="Label" type="Label" parent="." unique_id=399058665]
 layout_mode = 1
@@ -20,3 +47,12 @@ grow_vertical = 0
 text = "Cost: 1.000.000"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1222687340]
+position = Vector2(240, 15)
+emitting = false
+amount = 1000
+texture = ExtResource("3_ma6lc")
+lifetime = 3.0
+one_shot = true
+process_material = SubResource("ParticleProcessMaterial_2vlaa")
