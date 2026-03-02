@@ -62,13 +62,15 @@ func spawn_particule() -> void:
 	
 	#scale and divide amount for 0>100, 100>1000, >1000
 	if dollar_amount < 100:
-		dollar_amount /=10
+		dollar_amount /= 10
 	if dollar_amount >= 100 and dollar_amount < 1000:
 		dollar_amount /= 100
-		dollar_particule.process_material.scale *= 3
+		dollar_particule.process_material.scale *= 2
 	if dollar_amount >= 1000:
 		dollar_amount /= 1000
-		dollar_particule.process_material.scale *= 6
+		dollar_particule.process_material.scale *= 4
 		
+	print(dollar_amount)
+	print(dollar_particule.process_material.scale)
 	dollar_particule.amount = dollar_amount
 	add_child(dollar_particule)
