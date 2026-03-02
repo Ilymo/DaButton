@@ -11,6 +11,7 @@
 [ext_resource type="Theme" uid="uid://d3xpjh6m3lol2" path="res://asset/stylebox/DaButton2/theme2.tres" id="8_ll5lq"]
 [ext_resource type="Theme" uid="uid://cuy8lkno7njke" path="res://asset/stylebox/DaButton3/theme3.tres" id="9_17rxn"]
 [ext_resource type="Theme" uid="uid://d3vqjlg1d8bfn" path="res://asset/stylebox/DaButton4/theme4.tres" id="10_yq8tf"]
+[ext_resource type="PackedScene" uid="uid://c0rq6rdrsuolh" path="res://scene/da_final_button.tscn" id="12_sng2h"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ll5lq"]
 shader = ExtResource("2_xlg7c")
@@ -31,6 +32,14 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_ym5sv")
 script = ExtResource("1_p1ry8")
+
+[node name="DaFinalButton" parent="." unique_id=1165392322 instance=ExtResource("12_sng2h")]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 200.0
+offset_right = 305.0
+offset_bottom = 450.0
+disabled = true
 
 [node name="Background" type="CanvasLayer" parent="." unique_id=1996470844]
 layer = -1
@@ -64,9 +73,9 @@ anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -214.0
+offset_left = -252.0
 offset_top = 12.0
-offset_right = -9.0
+offset_right = -12.0
 offset_bottom = -12.0
 grow_horizontal = 0
 grow_vertical = 2
@@ -89,10 +98,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -170.0
-offset_top = -224.0
-offset_right = 180.0
-offset_bottom = 256.0
+offset_left = -175.0
+offset_top = -50.0
+offset_right = 175.0
+offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 25
@@ -100,6 +109,8 @@ theme_override_constants/separation = 25
 [node name="DaButton" parent="DaButtonContainer" unique_id=793015781 instance=ExtResource("5_xlg7c")]
 layout_mode = 2
 theme = ExtResource("7_ym5sv")
+text = "DaButton1
+"
 
 [node name="DaButton2" parent="DaButtonContainer" unique_id=1486820671 instance=ExtResource("5_xlg7c")]
 visible = false

@@ -1,0 +1,22 @@
+[gd_resource type="Theme" format=3 uid="uid://bj5ugp2mkep37"]
+
+[ext_resource type="StyleBox" uid="uid://bu3ayre6hb5ie" path="res://asset/stylebox/FinalButton/final_disable.tres" id="1_kf4nm"]
+[ext_resource type="StyleBox" uid="uid://dfydpx8ysli0w" path="res://asset/stylebox/FinalButton/final_hover.tres" id="2_jsvv1"]
+[ext_resource type="StyleBox" uid="uid://duy81huvj6ppg" path="res://asset/stylebox/FinalButton/final_normal.tres" id="2_u1wxm"]
+[ext_resource type="StyleBox" uid="uid://cmd3renoxrp51" path="res://asset/stylebox/FinalButton/final_pressed.tres" id="4_0aie0"]
+[ext_resource type="StyleBox" uid="uid://c6mdb8mt3uxc" path="res://asset/stylebox/DaButton1/progress_bar1.tres" id="4_b248p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c8dq7"]
+
+[resource]
+Button/colors/font_color = Color(0.27450982, 0.25882354, 0.36862746, 1)
+Button/colors/font_focus_color = Color(0.27450982, 0.25882354, 0.36862746, 1)
+Button/colors/font_hover_color = Color(0.27450982, 0.25882354, 0.36862746, 1)
+Button/colors/font_pressed_color = Color(0.27450982, 0.25882354, 0.36862746, 1)
+Button/font_sizes/font_size = 25
+Button/styles/disabled = ExtResource("1_kf4nm")
+Button/styles/hover = ExtResource("2_jsvv1")
+Button/styles/normal = ExtResource("2_u1wxm")
+Button/styles/pressed = ExtResource("4_0aie0")
+ProgressBar/styles/background = SubResource("StyleBoxEmpty_c8dq7")
+ProgressBar/styles/fill = ExtResource("4_b248p")

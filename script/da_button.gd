@@ -46,6 +46,7 @@ func is_clickable(clickable: bool) -> void:
 	else:
 		self.disabled = false
 
+
 func spawn_particule() -> void:
 	#instantiate and set position for the GPUParticule2D node
 	var dollar_particule = dollar_particule_scene.instantiate()
@@ -62,15 +63,13 @@ func spawn_particule() -> void:
 	
 	#scale and divide amount for 0>100, 100>1000, >1000
 	if dollar_amount < 100:
-		dollar_amount /= 10
+		dollar_amount /=10
 	if dollar_amount >= 100 and dollar_amount < 1000:
 		dollar_amount /= 100
-		dollar_particule.process_material.scale *= 2
+		dollar_particule.process_material.scale *= 3
 	if dollar_amount >= 1000:
 		dollar_amount /= 1000
-		dollar_particule.process_material.scale *= 4
+		dollar_particule.process_material.scale *= 6
 		
-	print(dollar_amount)
-	print(dollar_particule.process_material.scale)
 	dollar_particule.amount = dollar_amount
 	add_child(dollar_particule)
