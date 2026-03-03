@@ -4,6 +4,8 @@ extends Control
 @onready var da_button_container: VBoxContainer = $DaButtonContainer
 @onready var upgrade_container: VBoxContainer = $UpgradeContainer
 @onready var da_final_button: Button = $DaFinalButton
+@onready var end_screen: CanvasLayer = %EndScreen
+@onready var timer: Timer = %Timer
 
 
 const DA_BUTTON = preload("uid://ciaenivvk8sw2")
@@ -27,33 +29,30 @@ func earn(button_pressed: String) -> void:
 	update_money(new_money)
 	
 
-#on upgrade pressed: increase lvl in datamanager by 1 and update money
-func upgrade_lvl(button_pressed: String) -> void:
+
+#on upgrade pressed: increase lvl in datamanager by 1, update upgrade_cost in datamanager , update current money
+func update_upgrade_lvl_and_cost(button_pressed: String):
+	
 	DataManager.button_property[button_pressed]["lvl"] += 1
 	var new_money = DataManager.current_money - DataManager.button_property[button_pressed]["up_cost"]
-	update_money(new_money)
-
-
-#on upgrade pressed: update upgrade_cost in datamanager
-func update_upgrade_cost(button_pressed: String):
+	
 	#new cost = base_cost * coef^lvl
-	var new_cost = (
+	var new_cost = round(
 		DataManager.button_property[button_pressed]["up_cost"] *
 		pow(DataManager.button_property[button_pressed]["coef"],
 			DataManager.button_property[button_pressed]["lvl"])
 	)
 	DataManager.button_property[button_pressed]["up_cost"] = new_cost
-
-
-#on cooldown button pressed: reduce cd by 1.0s(formule a définir) and update money
-func upgrade_cd(button_pressed: String) -> void:
-	DataManager.button_property[button_pressed]["cooldown"] -= 1.0
-	var new_money = DataManager.current_money - DataManager.button_property[button_pressed]["cd_cost"]
+	
 	update_money(new_money)
 
 
-#on cooldown button pressed: update cooldown_cost in datamanager
-func update_cd_cost(button_pressed: String) -> void:
+#on cooldown button pressed: reduce cd by 1.0s(formule a définir), update cooldown_cost in datamanager and update money
+func update_cd_lvl_and_cost(button_pressed: String) -> void:
+	#reduce cd by 1.0s(formule a définir)
+	DataManager.button_property[button_pressed]["cooldown"] -= 1.0
+	var new_money = DataManager.current_money - DataManager.button_property[button_pressed]["cd_cost"]
+	
 	#new cost = base_cost * coef^lvl
 	var new_cost = (
 		DataManager.button_property[button_pressed]["cd_cost"] *
@@ -61,6 +60,8 @@ func update_cd_cost(button_pressed: String) -> void:
 			DataManager.button_property[button_pressed]["cd_lvl"])
 	)
 	DataManager.button_property[button_pressed]["cd_cost"] = new_cost
+	
+	update_money(new_money)
 
 
 #func that unlock new button by instanciate it and append to container
@@ -71,6 +72,8 @@ func unlock_dabutton(button_name: String) -> void:
 	#change theme:
 	new_dabutton.theme = DataManager.button_property[button_name]["theme"]
 	da_button_container.add_child(new_dabutton)
+	var new_money = DataManager.current_money - DataManager.button_property[button_name]["unlock_cost"]
+	update_money(new_money)
 
 
 func unlock_upgrade_button(button_name: String) -> void:
@@ -90,6 +93,7 @@ func unlock_upgrade_button(button_name: String) -> void:
 	upgrade_container.add_child(new_upgrade_button)
 	upgrade_container.add_child(new_cooldown_button)
 
+
 #func unlock a voir, maybe use un index quelque pars
 func next_unlock() -> void:
 	# increase target_index that add after "DaButton" to instantiate new unlock button
@@ -104,3 +108,8 @@ func next_unlock() -> void:
 	#change theme:
 	new_unlock_button.theme = DataManager.button_property[new_unlock_button.target_button]["theme"]
 	upgrade_container.add_child(new_unlock_button)
+
+
+func triger_end() -> void:
+	timer.stop()
+	end_screen.show()

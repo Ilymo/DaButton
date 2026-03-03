@@ -25,6 +25,8 @@ spread = 180.0
 initial_velocity_min = 100.0
 initial_velocity_max = 500.0
 gravity = Vector3(0, 300, 0)
+scale_min = 5.0
+scale_max = 5.0
 scale_curve = SubResource("CurveTexture_3gtsc")
 alpha_curve = SubResource("CurveTexture_h8bte")
 
@@ -49,6 +51,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1222687340]
+z_index = 10
 position = Vector2(240, 15)
 emitting = false
 amount = 1000

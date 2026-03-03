@@ -12,8 +12,7 @@ func _ready() -> void:
 	update_cost_label()
 	update_buyable()
 	#func connected to game_controler
-	self.pressed.connect(root_node.upgrade_lvl.bind(target_button))
-	self.pressed.connect(root_node.update_upgrade_cost.bind(target_button))
+	self.pressed.connect(root_node.update_upgrade_lvl_and_cost.bind(target_button))
 	self.pressed.connect(update_cost_label)
 
 
