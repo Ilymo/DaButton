@@ -57,3 +57,16 @@ vertical_alignment = 1
 script = ExtResource("2_cqttw")
 rotation_amount = 10.0
 metadata/_custom_type_script = "uid://ti7xdt6y0yut"
+
+[node name="CdTimeLabel" type="Label" parent="." unique_id=242167171]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 2.0
+offset_bottom = 30.0
+grow_horizontal = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TicTimer" type="Timer" parent="." unique_id=1895131973]
+wait_time = 0.1

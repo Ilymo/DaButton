@@ -29,7 +29,6 @@ func update_buyable() -> void:
 	var current_money = DataManager.current_money
 	var current_level: int =  DataManager.button_property[target_button]["cd_lvl"]
 	var max_level: int = DataManager.button_property[target_button]["max_cd_lvl"]
-	print(current_level)
 	if current_money >= DataManager.button_property[target_button]["cd_cost"] and current_level < max_level:
 			self.disabled = false
 	else:
