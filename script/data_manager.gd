@@ -23,6 +23,7 @@ var button_property: Dictionary = {
 		},
 		
 	"DaButton2": {
+		"label": "Betta Button",
 		#multiplier:
 		"coef": 1.20,
 		#upgrade :
@@ -31,7 +32,7 @@ var button_property: Dictionary = {
 		"up_cost": 200,
 		#cooldown:
 		"cd_lvl": 1,
-		"cooldown": 3.0,
+		"cooldown": 2.0,
 		"cd_cost": 1100,
 		#unlock:
 		"unlock_cost": 100,
@@ -39,6 +40,7 @@ var button_property: Dictionary = {
 	},
 	
 	"DaButton3": {
+		"label": "Supa Button",
 		#multiplier:
 		"coef": 1.20,
 		#upgrade :
@@ -47,7 +49,7 @@ var button_property: Dictionary = {
 		"up_cost": 3000,
 		#cooldown:
 		"cd_lvl": 1,
-		"cooldown": 3.0,
+		"cooldown": 4.0,
 		"cd_cost": 1100,
 		#unlock:
 		"unlock_cost": 300, #to change
@@ -55,6 +57,7 @@ var button_property: Dictionary = {
 	},
 	
 	"DaButton4": {
+		"label": "Giga Button",
 		#multiplier:
 		"coef": 1.20,
 		#upgrade :
@@ -63,7 +66,7 @@ var button_property: Dictionary = {
 		"up_cost": 4000,
 		#cooldown:
 		"cd_lvl": 1,
-		"cooldown": 3.0,
+		"cooldown": 6.0,
 		"cd_cost": 4100,
 		#unlock:
 		"unlock_cost": 400, #to change

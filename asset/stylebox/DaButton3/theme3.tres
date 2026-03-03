@@ -9,6 +9,8 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j1pkg"]
 
 [resource]
+Button/colors/font_outline_color = Color(0.27450982, 0.25882354, 0.36862746, 1)
+Button/constants/outline_size = 6
 Button/styles/disabled = ExtResource("1_j1pkg")
 Button/styles/hover = ExtResource("1_pb36i")
 Button/styles/normal = ExtResource("1_w7ksn")

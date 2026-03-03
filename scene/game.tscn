@@ -35,12 +35,18 @@ grow_vertical = 2
 theme = ExtResource("1_ym5sv")
 script = ExtResource("1_p1ry8")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1580191823]
+unique_name_in_owner = true
+anchor_mode = 0
+ignore_rotation = false
+limit_enabled = false
+
 [node name="DaFinalButton" parent="." unique_id=1165392322 instance=ExtResource("12_sng2h")]
 layout_mode = 0
-offset_left = 37.0
-offset_top = 200.0
-offset_right = 305.0
-offset_bottom = 450.0
+offset_left = 14.0
+offset_top = 221.0
+offset_right = 329.0
+offset_bottom = 421.0
 disabled = true
 
 [node name="Background" type="CanvasLayer" parent="." unique_id=1996470844]
@@ -53,84 +59,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Money" type="Label" parent="." unique_id=664772266]
-custom_minimum_size = Vector2(200, 100)
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -100.0
-offset_right = 100.0
-offset_bottom = 100.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 35
-text = "$ 0"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="UpgradeContainer" type="VBoxContainer" parent="." unique_id=1168790008]
-layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -252.0
-offset_top = 12.0
-offset_right = -12.0
-offset_bottom = -12.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_constants/separation = 15
-
-[node name="UpGradeButton" parent="UpgradeContainer" unique_id=1783785731 instance=ExtResource("2_xwcet")]
-layout_mode = 2
-theme = ExtResource("7_ym5sv")
-text = "UPGRADE DaButton 1"
-
-[node name="UnlockButton" parent="UpgradeContainer" unique_id=1726843335 instance=ExtResource("3_xwcet")]
-layout_mode = 2
-theme = ExtResource("8_ll5lq")
-text = "UNLOCK DaButton2"
-
-[node name="DaButtonContainer" type="VBoxContainer" parent="." unique_id=506715371]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -175.0
-offset_top = -50.0
-offset_right = 175.0
-offset_bottom = 50.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 25
-
-[node name="DaButton" parent="DaButtonContainer" unique_id=793015781 instance=ExtResource("5_xlg7c")]
-layout_mode = 2
-theme = ExtResource("7_ym5sv")
-text = "DaButton1
-"
-
-[node name="DaButton2" parent="DaButtonContainer" unique_id=1486820671 instance=ExtResource("5_xlg7c")]
-visible = false
-layout_mode = 2
-theme = ExtResource("8_ll5lq")
-target_button = "DaButton2"
-
-[node name="DaButton3" parent="DaButtonContainer" unique_id=1876840140 instance=ExtResource("5_xlg7c")]
-visible = false
-layout_mode = 2
-theme = ExtResource("9_17rxn")
-target_button = "DaButton3"
-
-[node name="DaButton4" parent="DaButtonContainer" unique_id=1746976342 instance=ExtResource("5_xlg7c")]
-visible = false
-layout_mode = 2
-theme = ExtResource("10_yq8tf")
-target_button = "DaButton4"
 
 [node name="EndScreen" type="CanvasLayer" parent="." unique_id=155144363]
 unique_name_in_owner = true
@@ -189,3 +117,87 @@ script = ExtResource("14_81276")
 [node name="Timer" type="Timer" parent="EndScreen/ColorRect" unique_id=1559422278]
 unique_name_in_owner = true
 autostart = true
+
+[node name="Money" type="Label" parent="." unique_id=664772266]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "$ 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UpgradeContainer" type="VBoxContainer" parent="." unique_id=1168790008]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -260.0
+offset_top = 12.0
+offset_right = -10.0
+offset_bottom = -11.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="UpGradeButton" parent="UpgradeContainer" unique_id=1783785731 instance=ExtResource("2_xwcet")]
+layout_mode = 2
+theme = ExtResource("7_ym5sv")
+text = "UPGRADE Da Button"
+
+[node name="UnlockButton" parent="UpgradeContainer" unique_id=1726843335 instance=ExtResource("3_xwcet")]
+layout_mode = 2
+theme = ExtResource("8_ll5lq")
+text = "UNLOCK Anoda Button"
+
+[node name="DaButtonContainer" type="VBoxContainer" parent="." unique_id=506715371]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -50.0
+offset_right = 175.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="DaButton" parent="DaButtonContainer" unique_id=793015781 instance=ExtResource("5_xlg7c")]
+layout_mode = 2
+theme = ExtResource("7_ym5sv")
+text = "Da Button
+"
+
+[node name="DaButton2" parent="DaButtonContainer" unique_id=1486820671 instance=ExtResource("5_xlg7c")]
+visible = false
+layout_mode = 2
+theme = ExtResource("8_ll5lq")
+text = "Da Button
+"
+target_button = "DaButton2"
+
+[node name="DaButton3" parent="DaButtonContainer" unique_id=844189197 instance=ExtResource("5_xlg7c")]
+visible = false
+layout_mode = 2
+theme = ExtResource("9_17rxn")
+text = "Da Button
+"
+target_button = "DaButton3"
+
+[node name="DaButton4" parent="DaButtonContainer" unique_id=1500147518 instance=ExtResource("5_xlg7c")]
+visible = false
+layout_mode = 2
+theme = ExtResource("10_yq8tf")
+text = "Da Button
+"
+target_button = "DaButton4"

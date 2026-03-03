@@ -2,6 +2,8 @@ extends Button
 
 @onready var gpu_particles_2d: GPUParticles2D = $GPUParticles2D
 @onready var root_node: Node = get_tree().root.get_child(1)
+@onready var camera_2d: Camera2D = %Camera2D
+
 
 var game_finished: bool = false
 
@@ -14,8 +16,13 @@ func _ready() -> void:
 
 func end_animation() -> void:
 	game_finished = true
+	self.disabled = true
+	camera_shake(true)
 	gpu_particles_2d.emitting = true
-	gpu_particles_2d.finished.connect(root_node.triger_end)
+	#gpu_particles_2d.finished.connect(root_node.triger_end)
+	await gpu_particles_2d.finished
+	camera_shake(false)
+	root_node.triger_end()
 
 func unlock_final() -> void:
 	#make final button appear when treshold is reach
@@ -29,3 +36,13 @@ func unlock_final() -> void:
 		self.disabled = false
 	else:
 		self.disabled = true
+
+
+func camera_shake(play: bool) -> void:
+	var shake_tween = create_tween().set_loops()
+	if play == true:
+		shake_tween.tween_property(camera_2d, "global_rotation_degrees", randf_range(0.4, 0.6), 0.05)
+		shake_tween.tween_property(camera_2d, "global_rotation_degrees", randf_range(-0.4, -0.6), 0.05)
+	else:
+		shake_tween.tween_property(camera_2d, "global_rotation_degrees", 0, 0.05)
+		
