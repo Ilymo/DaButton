@@ -49,8 +49,9 @@ func update_upgrade_lvl_and_cost(button_pressed: String):
 
 #on cooldown button pressed: reduce cd by 1.0s(formule a définir), update cooldown_cost in datamanager and update money
 func update_cd_lvl_and_cost(button_pressed: String) -> void:
-	#reduce cd by 1.0s(formule a définir)
+	#reduce cd by 1.0s(formule a définir, maybe cd_lvl * ratio)
 	DataManager.button_property[button_pressed]["cooldown"] -= 1.0
+	DataManager.button_property[button_pressed]["cd_lvl"] += 1
 	var new_money = DataManager.current_money - DataManager.button_property[button_pressed]["cd_cost"]
 	
 	#new cost = base_cost * coef^lvl

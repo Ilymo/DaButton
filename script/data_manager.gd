@@ -17,7 +17,7 @@ var button_property: Dictionary = {
 		"coef": 1.10,
 		
 		"lvl": 1,
-		"earn": 10,
+		"earn": 10000000,
 		"up_cost": 10,
 		"theme": preload("res://asset/stylebox/DaButton1/theme1.tres")
 		},
@@ -32,6 +32,7 @@ var button_property: Dictionary = {
 		"up_cost": 200,
 		#cooldown:
 		"cd_lvl": 1,
+		"max_cd_lvl": 10,
 		"cooldown": 2.0,
 		"cd_cost": 1100,
 		#unlock:
@@ -49,6 +50,7 @@ var button_property: Dictionary = {
 		"up_cost": 3000,
 		#cooldown:
 		"cd_lvl": 1,
+		"max_cd_lvl": 10,
 		"cooldown": 4.0,
 		"cd_cost": 1100,
 		#unlock:
@@ -66,6 +68,7 @@ var button_property: Dictionary = {
 		"up_cost": 4000,
 		#cooldown:
 		"cd_lvl": 1,
+		"max_cd_lvl": 10,
 		"cooldown": 6.0,
 		"cd_cost": 4100,
 		#unlock:
