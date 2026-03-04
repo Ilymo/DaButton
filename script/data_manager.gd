@@ -14,10 +14,10 @@ var max_target_index: int = 4
 
 var button_property: Dictionary = {
 	"DaButton1": {
-		"coef": 1.10,
+		"coef": 1.005,
 		
 		"lvl": 1,
-		"earn": 10000000,
+		"earn": 10,
 		"up_cost": 10,
 		"theme": preload("res://asset/stylebox/DaButton1/theme1.tres"),
 		"sound": preload("res://asset/audio/click_002.ogg")
@@ -26,16 +26,17 @@ var button_property: Dictionary = {
 	"DaButton2": {
 		"label": "Betta Button",
 		#multiplier:
-		"coef": 1.20,
+		"coef": 1.01,
 		#upgrade :
 		"lvl": 1,
-		"earn": 20,
-		"up_cost": 200,
+		"earn": 100,
+		"up_cost": 1000,
 		#cooldown:
 		"cd_lvl": 1,
 		"max_cd_lvl": 10,
-		"cooldown": 2.0,
-		"cd_cost": 1100,
+		"cooldown": 10.0,
+		"initial_cd": 10.0,
+		"cd_cost": 3000,
 		#unlock:
 		"unlock_cost": 100,
 		"theme": preload("res://asset/stylebox/DaButton2/theme2.tres"),
@@ -45,18 +46,19 @@ var button_property: Dictionary = {
 	"DaButton3": {
 		"label": "Supa Button",
 		#multiplier:
-		"coef": 1.20,
+		"coef": 1.03,
 		#upgrade :
 		"lvl": 1,
-		"earn": 300,
-		"up_cost": 3000,
+		"earn": 10000,
+		"up_cost": 10000,
 		#cooldown:
 		"cd_lvl": 1,
 		"max_cd_lvl": 10,
-		"cooldown": 4.0,
-		"cd_cost": 1100,
+		"cooldown": 20.0,
+		"initial_cd": 20.0,
+		"cd_cost": 30000,
 		#unlock:
-		"unlock_cost": 300, #to change
+		"unlock_cost": 10000, #to change
 		"theme": preload("res://asset/stylebox/DaButton3/theme3.tres"),
 		"sound": preload("res://asset/audio/drop_001.ogg")
 	},
@@ -64,18 +66,19 @@ var button_property: Dictionary = {
 	"DaButton4": {
 		"label": "Giga Button",
 		#multiplier:
-		"coef": 1.20,
+		"coef": 1.06,
 		#upgrade :
 		"lvl": 1,
-		"earn": 4000,
-		"up_cost": 4000,
+		"earn": 100000,
+		"up_cost": 100000,
 		#cooldown:
 		"cd_lvl": 1,
 		"max_cd_lvl": 10,
-		"cooldown": 6.0,
-		"cd_cost": 4100,
+		"cooldown": 30.0,
+		"initial_cd": 30.0,
+		"cd_cost": 300000,
 		#unlock:
-		"unlock_cost": 400, #to change
+		"unlock_cost": 100000, #to change
 		"theme": preload("res://asset/stylebox/DaButton4/theme4.tres"),
 		"sound": preload("res://asset/audio/drop_004.ogg")
 	}

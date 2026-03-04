@@ -17,6 +17,10 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 config/name="DaButton"
 config/features=PackedStringArray("4.6")
 
+[audio]
+
+buses/default_bus_layout="uid://b10brhmwe2kf"
+
 [autoload]
 
 DataManager="*res://script/data_manager.gd"
@@ -24,6 +28,7 @@ DataManager="*res://script/data_manager.gd"
 [display]
 
 window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [rendering]
 

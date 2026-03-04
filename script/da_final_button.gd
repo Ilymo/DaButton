@@ -27,12 +27,12 @@ func end_animation() -> void:
 
 func unlock_final() -> void:
 	#make final button appear when treshold is reach
-	var appear_treshold: int = 200
+	var appear_treshold: int = 1000000
 	if DataManager.current_money >= appear_treshold:
 		visible = true
 		
 	#tempo a mettre dans datamanager
-	var final_cost: int = 1000
+	var final_cost: int = 30000000
 	if DataManager.current_money >= final_cost and game_finished == false:
 		self.disabled = false
 	else:

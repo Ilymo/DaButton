@@ -9,8 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://ciaenivvk8sw2" path="res://scene/da_button.tscn" id="5_xlg7c"]
 [ext_resource type="Theme" uid="uid://xj7a6e16yhyu" path="res://asset/stylebox/DaButton1/theme1.tres" id="7_ym5sv"]
 [ext_resource type="Theme" uid="uid://d3xpjh6m3lol2" path="res://asset/stylebox/DaButton2/theme2.tres" id="8_ll5lq"]
-[ext_resource type="Theme" uid="uid://cuy8lkno7njke" path="res://asset/stylebox/DaButton3/theme3.tres" id="9_17rxn"]
-[ext_resource type="Theme" uid="uid://d3vqjlg1d8bfn" path="res://asset/stylebox/DaButton4/theme4.tres" id="10_yq8tf"]
 [ext_resource type="PackedScene" uid="uid://c0rq6rdrsuolh" path="res://scene/da_final_button.tscn" id="12_sng2h"]
 [ext_resource type="Theme" uid="uid://c2ge82srkw3wn" path="res://asset/stylebox/end_theme.tres" id="13_5g16k"]
 [ext_resource type="Script" uid="uid://dygyts0osejiq" path="res://script/timer.gd" id="14_81276"]
@@ -179,30 +177,6 @@ layout_mode = 2
 theme = ExtResource("7_ym5sv")
 text = "Da Button
 "
-
-[node name="DaButton2" parent="DaButtonContainer" unique_id=1486820671 instance=ExtResource("5_xlg7c")]
-visible = false
-layout_mode = 2
-theme = ExtResource("8_ll5lq")
-text = "Da Button
-"
-target_button = "DaButton2"
-
-[node name="DaButton3" parent="DaButtonContainer" unique_id=844189197 instance=ExtResource("5_xlg7c")]
-visible = false
-layout_mode = 2
-theme = ExtResource("9_17rxn")
-text = "Da Button
-"
-target_button = "DaButton3"
-
-[node name="DaButton4" parent="DaButtonContainer" unique_id=1500147518 instance=ExtResource("5_xlg7c")]
-visible = false
-layout_mode = 2
-theme = ExtResource("10_yq8tf")
-text = "Da Button
-"
-target_button = "DaButton4"
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=416851044]
 stream = ExtResource("15_ve786")
