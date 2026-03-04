@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cklljxxonwwx" path="res://script/cooldown_button.gd" id="1_0mjyf"]
 [ext_resource type="Script" uid="uid://ti7xdt6y0yut" path="res://script/dabutton_animator.gd" id="2_1wj75"]
+[ext_resource type="AudioStream" uid="uid://cmtloolvomq4m" path="res://asset/audio/tick_001.ogg" id="3_ct651"]
 
 [node name="CooldownButton" type="Button" unique_id=2026820248]
 custom_minimum_size = Vector2(200, 75)
@@ -35,3 +36,7 @@ vertical_alignment = 1
 [node name="DaButtonAnimator" type="Node" parent="." unique_id=1223774985]
 script = ExtResource("2_1wj75")
 metadata/_custom_type_script = "uid://ti7xdt6y0yut"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1776276987]
+stream = ExtResource("3_ct651")
+bus = &"Sfx"

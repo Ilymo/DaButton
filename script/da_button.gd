@@ -5,6 +5,7 @@ extends Button
 @onready var progress_bar: ProgressBar = $Mask/ProgressBar
 @onready var cd_time_label: Label = $CdTimeLabel
 @onready var tic_timer: Timer = $TicTimer
+@onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
 
 
 @export var target_button: String = "DaButton1" #has to be change in inspector
@@ -17,7 +18,10 @@ func _ready() -> void:
 	self.pressed.connect(update_earn_label)
 	self.pressed.connect(cooldown_animation)
 	self.pressed.connect(spawn_particule)
+	self.pressed.connect(play_sound)
+	audio_stream_player.stream = DataManager.button_property[target_button]["sound"]
 	DataManager.current_money_changed.connect(update_earn_label)
+	
 
 
 func update_earn_label() -> void:
@@ -94,3 +98,7 @@ func spawn_particule() -> void:
 		
 	dollar_particule.amount = dollar_amount
 	add_child(dollar_particule)
+
+
+func play_sound() -> void:
+	audio_stream_player.play()

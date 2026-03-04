@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://c0rq6rdrsuolh" path="res://scene/da_final_button.tscn" id="12_sng2h"]
 [ext_resource type="Theme" uid="uid://c2ge82srkw3wn" path="res://asset/stylebox/end_theme.tres" id="13_5g16k"]
 [ext_resource type="Script" uid="uid://dygyts0osejiq" path="res://script/timer.gd" id="14_81276"]
+[ext_resource type="AudioStream" uid="uid://cj4uqlftrqiyx" path="res://asset/audio/Space Odyssey.wav" id="15_ve786"]
+[ext_resource type="PackedScene" uid="uid://nwjee23ifc1d" path="res://scene/volume_slider.tscn" id="16_0lu6w"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ll5lq"]
 shader = ExtResource("2_xlg7c")
@@ -201,3 +203,32 @@ theme = ExtResource("10_yq8tf")
 text = "Da Button
 "
 target_button = "DaButton4"
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=416851044]
+stream = ExtResource("15_ve786")
+autoplay = true
+bus = &"Music"
+
+[node name="HBoxContainer" type="VBoxContainer" parent="." unique_id=786267333]
+layout_mode = 1
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 166.0
+offset_bottom = 106.0
+
+[node name="MusicVolume" type="Label" parent="HBoxContainer" unique_id=1384147193]
+layout_mode = 2
+text = "Music Volume :"
+
+[node name="MusicSlider" parent="HBoxContainer" unique_id=646324372 instance=ExtResource("16_0lu6w")]
+layout_mode = 2
+value = 0.5
+bus_name = "Music"
+
+[node name="SfxVolume" type="Label" parent="HBoxContainer" unique_id=1470438597]
+layout_mode = 2
+text = "Sfx Volume :"
+
+[node name="SfxSlider" parent="HBoxContainer" unique_id=1783402159 instance=ExtResource("16_0lu6w")]
+layout_mode = 2
+bus_name = "Sfx"

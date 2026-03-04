@@ -19,7 +19,8 @@ var button_property: Dictionary = {
 		"lvl": 1,
 		"earn": 10000000,
 		"up_cost": 10,
-		"theme": preload("res://asset/stylebox/DaButton1/theme1.tres")
+		"theme": preload("res://asset/stylebox/DaButton1/theme1.tres"),
+		"sound": preload("res://asset/audio/click_002.ogg")
 		},
 		
 	"DaButton2": {
@@ -37,7 +38,8 @@ var button_property: Dictionary = {
 		"cd_cost": 1100,
 		#unlock:
 		"unlock_cost": 100,
-		"theme": preload("res://asset/stylebox/DaButton2/theme2.tres")
+		"theme": preload("res://asset/stylebox/DaButton2/theme2.tres"),
+		"sound": preload("res://asset/audio/select_001.ogg")
 	},
 	
 	"DaButton3": {
@@ -55,7 +57,8 @@ var button_property: Dictionary = {
 		"cd_cost": 1100,
 		#unlock:
 		"unlock_cost": 300, #to change
-		"theme": preload("res://asset/stylebox/DaButton3/theme3.tres")
+		"theme": preload("res://asset/stylebox/DaButton3/theme3.tres"),
+		"sound": preload("res://asset/audio/drop_001.ogg")
 	},
 	
 	"DaButton4": {
@@ -73,6 +76,7 @@ var button_property: Dictionary = {
 		"cd_cost": 4100,
 		#unlock:
 		"unlock_cost": 400, #to change
-		"theme": preload("res://asset/stylebox/DaButton4/theme4.tres")
+		"theme": preload("res://asset/stylebox/DaButton4/theme4.tres"),
+		"sound": preload("res://asset/audio/drop_004.ogg")
 	}
 }

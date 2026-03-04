@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dn8m60frhfiij" path="res://script/unlock_button.gd" id="1_0uc3m"]
 [ext_resource type="Script" uid="uid://ti7xdt6y0yut" path="res://script/dabutton_animator.gd" id="2_s5x52"]
+[ext_resource type="AudioStream" uid="uid://cwtkvge5syewc" path="res://asset/audio/select_001.ogg" id="3_jcgpt"]
 
 [node name="UnlockButton" type="Button" unique_id=701220245]
 custom_minimum_size = Vector2(200, 75)
@@ -24,3 +25,7 @@ vertical_alignment = 1
 [node name="DaButtonAnimator" type="Node" parent="." unique_id=461570005]
 script = ExtResource("2_s5x52")
 metadata/_custom_type_script = "uid://ti7xdt6y0yut"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2134371066]
+stream = ExtResource("3_jcgpt")
+bus = &"Sfx"

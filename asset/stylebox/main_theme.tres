@@ -1,9 +1,13 @@
 [gd_resource type="Theme" format=3 uid="uid://b7k4c3l8ystqj"]
 
 [ext_resource type="FontFile" uid="uid://dsrwwsxdpeur8" path="res://asset/brushstr.ttf" id="1_8jb7k"]
+[ext_resource type="StyleBox" uid="uid://d1ncd45jkibxi" path="res://asset/stylebox/Main/slider_grabber_area.tres" id="2_1rsyk"]
+[ext_resource type="StyleBox" uid="uid://bt2rm4qegb3nu" path="res://asset/stylebox/Main/slider_grabber_area_highlight.tres" id="3_lvpdu"]
 
 [resource]
 Button/fonts/font = ExtResource("1_8jb7k")
+HSlider/styles/grabber_area = ExtResource("2_1rsyk")
+HSlider/styles/grabber_area_highlight = ExtResource("3_lvpdu")
 Label/colors/font_outline_color = Color(0.27450982, 0.25882354, 0.36862746, 1)
 Label/constants/outline_size = 5
 Label/fonts/font = ExtResource("1_8jb7k")

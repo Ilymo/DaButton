@@ -2,6 +2,9 @@ extends Button
 
 @onready var root_node: Node = get_tree().root.get_child(1)
 @onready var unlock_cost: Label = $UnlockCost
+@onready var da_button_animator: DaButtonAnimator = $DaButtonAnimator
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+
 
 # target_index from datamanager is the suffix added after "DaButton" starting from 2 to 4
 #used to generate next unlock button
@@ -17,6 +20,8 @@ func _ready() -> void:
 	self.pressed.connect(root_node.unlock_upgrade_button.bind(target_button))
 	self.pressed.connect(root_node.next_unlock)
 	self.pressed.connect(queue_free)
+	self.pressed.connect(play_sound)
+	audio_stream_player.stream = DataManager.button_property[target_button]["sound"]
 
 func update_cost_label() -> void:
 	var new_cost: int = DataManager.button_property[target_button]["unlock_cost"]
@@ -30,3 +35,6 @@ func update_buyable() -> void:
 			self.disabled = false
 	else:
 			self.disabled = true
+
+func play_sound() -> void:
+	audio_stream_player.play()

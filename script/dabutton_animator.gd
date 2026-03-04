@@ -25,6 +25,8 @@ var hover_tween: Tween
 var scale_tween: Tween
 var rotation_tween: Tween
 
+signal is_hovered
+
 func _ready() -> void:
 	button.pivot_offset_ratio = Vector2(0.5, 0.5)
 	button.mouse_entered.connect(hover_animation.bind(true))
@@ -45,6 +47,7 @@ func hover_animation(hovered: bool) -> void:
 		hover_tween = create_tween()
 		hover_tween.tween_property(button, "scale", 
 			hover_scale_amount if hovered else Vector2.ONE, hover_animation_duration)
+		is_hovered.emit()
 
 
 ## Scale animation when button is pressed

@@ -3,6 +3,8 @@ extends Button
 @onready var root_node: Node = get_tree().root.get_child(1)
 @onready var cooldown_cost: Label = $CooldownCost
 @onready var level: Label = $Level
+@onready var da_button_animator: DaButtonAnimator = $DaButtonAnimator
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 
 @export var target_button: String = "DaButton2"
@@ -16,6 +18,8 @@ func _ready() -> void:
 	#func connected to game_controler
 	self.pressed.connect(root_node.update_cd_lvl_and_cost.bind(target_button))
 	self.pressed.connect(update_cost_and_level_label)
+	self.pressed.connect(play_sound)
+	audio_stream_player.stream = DataManager.button_property[target_button]["sound"]
 
 
 func update_cost_and_level_label() -> void:
@@ -33,3 +37,7 @@ func update_buyable() -> void:
 			self.disabled = false
 	else:
 			self.disabled = true
+
+
+func play_sound() -> void:
+	audio_stream_player.play()
