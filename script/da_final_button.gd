@@ -3,6 +3,7 @@ extends Button
 @onready var gpu_particles_2d: GPUParticles2D = $GPUParticles2D
 @onready var root_node: Node = get_tree().root.get_child(1)
 @onready var camera_2d: Camera2D = %Camera2D
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 
 var game_finished: bool = false
@@ -19,7 +20,7 @@ func end_animation() -> void:
 	self.disabled = true
 	camera_shake(true)
 	gpu_particles_2d.emitting = true
-	#gpu_particles_2d.finished.connect(root_node.triger_end)
+	audio_stream_player.play()
 	await gpu_particles_2d.finished
 	camera_shake(false)
 	root_node.triger_end()
