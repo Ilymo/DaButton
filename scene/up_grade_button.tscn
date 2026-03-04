@@ -29,3 +29,25 @@ metadata/_custom_type_script = "uid://ti7xdt6y0yut"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=999057872]
 stream = ExtResource("3_rrqcy")
 bus = &"Sfx"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2035754099]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 15.0
+offset_top = 3.0
+offset_right = -15.0
+offset_bottom = 26.0
+grow_horizontal = 2
+
+[node name="Level" type="Label" parent="HBoxContainer" unique_id=1096221692]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "lvl: 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Earn" type="Label" parent="HBoxContainer" unique_id=2079232813]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "+ 10.000"
