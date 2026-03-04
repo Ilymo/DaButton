@@ -22,17 +22,6 @@ text = "Cost: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Level" type="Label" parent="." unique_id=1440274303]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = 3.0
-offset_bottom = 26.0
-grow_horizontal = 2
-text = "lvl: 1/10"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="DaButtonAnimator" type="Node" parent="." unique_id=1223774985]
 script = ExtResource("2_1wj75")
 metadata/_custom_type_script = "uid://ti7xdt6y0yut"
@@ -40,3 +29,24 @@ metadata/_custom_type_script = "uid://ti7xdt6y0yut"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1776276987]
 stream = ExtResource("3_ct651")
 bus = &"Sfx"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1538341978]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 15.0
+offset_top = 3.0
+offset_right = -15.0
+offset_bottom = 26.0
+grow_horizontal = 2
+
+[node name="Level" type="Label" parent="HBoxContainer" unique_id=1440274303]
+layout_mode = 2
+text = "lvl: 1/10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="cd_reduc" type="Label" parent="HBoxContainer" unique_id=1683941552]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "-10%"

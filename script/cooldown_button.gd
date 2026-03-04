@@ -2,7 +2,7 @@ extends Button
 
 @onready var root_node: Node = get_tree().root.get_child(1)
 @onready var cooldown_cost: Label = $CooldownCost
-@onready var level: Label = $Level
+@onready var level: Label = $HBoxContainer/Level
 @onready var da_button_animator: DaButtonAnimator = $DaButtonAnimator
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
