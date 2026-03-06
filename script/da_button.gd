@@ -11,6 +11,9 @@ extends Button
 @export var target_button: String = "DaButton1" #has to be change in inspector
 
 var dollar_particule_scene: PackedScene = preload("res://scene/dollar_particule.tscn")
+# keep track of sound to reset it due to bug on web version
+var play_count: int = 0
+var saved_stream: AudioStream
 
 func _ready() -> void:
 	update_earn_label()
@@ -21,7 +24,8 @@ func _ready() -> void:
 	self.pressed.connect(play_sound)
 	audio_stream_player.stream = DataManager.button_property[target_button]["sound"]
 	DataManager.current_money_changed.connect(update_earn_label)
-	
+	# keep track of sound to reset it due to bug on web version
+	saved_stream = audio_stream_player.stream.duplicate()
 
 
 func update_earn_label() -> void:
@@ -102,3 +106,8 @@ func spawn_particule() -> void:
 
 func play_sound() -> void:
 	audio_stream_player.play()
+	#reset audio du to bug on web version
+	play_count += 1
+	if play_count >= 100:
+		play_count = 0
+		audio_stream_player.stream = saved_stream.duplicate()

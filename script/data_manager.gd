@@ -17,7 +17,7 @@ var button_property: Dictionary = {
 		"coef": 1.005,
 		
 		"lvl": 1,
-		"earn": 200000,
+		"earn": 20,
 		"up_cost": 30,
 		"theme": preload("res://asset/stylebox/DaButton1/theme1.tres"),
 		"sound": preload("res://asset/audio/click_005.ogg")

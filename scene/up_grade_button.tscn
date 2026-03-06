@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dd1dqakmx40pm" path="res://script/upgrade_button.gd" id="1_7hk17"]
 [ext_resource type="Script" uid="uid://ti7xdt6y0yut" path="res://script/dabutton_animator.gd" id="2_ofu40"]
-[ext_resource type="AudioStream" uid="uid://orm34oambggi" path="res://asset/audio/click_002.ogg" id="3_rrqcy"]
 
 [node name="UpGradeButton" type="Button" unique_id=1185915474]
 custom_minimum_size = Vector2(200, 75)
@@ -27,7 +26,6 @@ script = ExtResource("2_ofu40")
 metadata/_custom_type_script = "uid://ti7xdt6y0yut"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=999057872]
-stream = ExtResource("3_rrqcy")
 bus = &"Sfx"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2035754099]

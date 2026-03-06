@@ -9,6 +9,10 @@ extends Button
 
 @export var target_button: String = "DaButton2"
 
+# keep track of sound to reset it due to bug on web version
+var play_count: int = 0
+var saved_stream: AudioStream 
+
 func _ready() -> void:
 	#connect to the signal emited when current money change
 	DataManager.current_money_changed.connect(update_buyable)
@@ -20,7 +24,8 @@ func _ready() -> void:
 	self.pressed.connect(update_cost_and_level_label)
 	self.pressed.connect(play_sound)
 	audio_stream_player.stream = DataManager.button_property[target_button]["sound"]
-
+	# keep track of sound to reset it due to bug on web version
+	saved_stream = audio_stream_player.stream.duplicate()
 
 func update_cost_and_level_label() -> void:
 	var new_cost: int = DataManager.button_property[target_button]["cd_cost"]
@@ -43,3 +48,8 @@ func update_buyable() -> void:
 
 func play_sound() -> void:
 	audio_stream_player.play()
+	#reset audio du to bug on web version
+	play_count += 1
+	if play_count >= 100:
+		play_count = 0
+		audio_stream_player.stream = saved_stream.duplicate()

@@ -9,6 +9,11 @@ extends Button
 # target_index from datamanager is the suffix added after "DaButton" starting from 2 to 4
 #used to generate next unlock button
 var current_target_index = DataManager.target_index
+
+# keep track of sound to reset it due to bug on web version
+var play_count: int = 0
+var saved_stream: AudioStream
+
 @export var target_button: String = "DaButton" + str(current_target_index)
 
 func _ready() -> void:
@@ -22,6 +27,9 @@ func _ready() -> void:
 	self.pressed.connect(queue_free)
 	self.pressed.connect(play_sound)
 	audio_stream_player.stream = DataManager.button_property[target_button]["sound"]
+	# keep track of sound to reset it due to bug on web version
+	saved_stream = audio_stream_player.stream.duplicate()
+	
 
 func update_cost_label() -> void:
 	var new_cost: int = DataManager.button_property[target_button]["unlock_cost"]
@@ -38,3 +46,8 @@ func update_buyable() -> void:
 
 func play_sound() -> void:
 	audio_stream_player.play()
+	#reset audio du to bug on web version
+	play_count += 1
+	if play_count >= 100:
+		play_count = 0
+		audio_stream_player.stream = saved_stream.duplicate()
