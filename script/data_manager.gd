@@ -17,10 +17,10 @@ var button_property: Dictionary = {
 		"coef": 1.005,
 		
 		"lvl": 1,
-		"earn": 20,
+		"earn": 200000,
 		"up_cost": 30,
 		"theme": preload("res://asset/stylebox/DaButton1/theme1.tres"),
-		"sound": preload("res://asset/audio/click_002.ogg")
+		"sound": preload("res://asset/audio/click_005.ogg")
 		},
 		
 	"DaButton2": {
@@ -40,7 +40,7 @@ var button_property: Dictionary = {
 		#unlock:
 		"unlock_cost": 50000,
 		"theme": preload("res://asset/stylebox/DaButton2/theme2.tres"),
-		"sound": preload("res://asset/audio/select_001.ogg")
+		"sound": preload("res://asset/audio/drop_002.ogg")
 	},
 	
 	"DaButton3": {
