@@ -25,7 +25,7 @@ func _ready() -> void:
 
 func update_cost_label() -> void:
 	var new_cost: int = DataManager.button_property[target_button]["unlock_cost"]
-	unlock_cost.text = "Cost: " + str(new_cost)
+	unlock_cost.text = "Cost: " + root_node.format_number(new_cost)
 
 
 #disable the button if current_money < cost

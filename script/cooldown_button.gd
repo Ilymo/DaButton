@@ -24,7 +24,7 @@ func _ready() -> void:
 
 func update_cost_and_level_label() -> void:
 	var new_cost: int = DataManager.button_property[target_button]["cd_cost"]
-	cooldown_cost.text = "Cost: " + str(new_cost)
+	cooldown_cost.text = "Cost: " + root_node.format_number(new_cost)
 	if DataManager.button_property[target_button]["cd_lvl"] == DataManager.button_property[target_button]["max_cd_lvl"]:
 		cooldown_cost.hide()
 	var new_level: int =  DataManager.button_property[target_button]["cd_lvl"]

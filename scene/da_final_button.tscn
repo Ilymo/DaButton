@@ -37,7 +37,7 @@ theme = ExtResource("1_8bsbu")
 text = "DA FINAL BUTTON"
 script = ExtResource("2_4uigg")
 
-[node name="Label" type="Label" parent="." unique_id=399058665]
+[node name="Cost" type="Label" parent="." unique_id=399058665]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0

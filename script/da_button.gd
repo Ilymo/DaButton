@@ -29,7 +29,7 @@ func update_earn_label() -> void:
 		DataManager.button_property[target_button]["earn"] *
 		DataManager.button_property[target_button]["lvl"]
 		)
-	earn.text = "earn: +" + str(new_earn)
+	earn.text = "earn: +" + root_node.format_number(new_earn)
 
 
 #start the progressbar fill animation

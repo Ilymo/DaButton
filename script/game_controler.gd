@@ -16,7 +16,7 @@ const UNLOCK_BUTTON = preload("uid://c68m3ocduotos")
 
 func update_money(amount: int) -> void:
 	DataManager.current_money = amount
-	money.text = "$" + str(DataManager.current_money)
+	money.text = "$" + format_number(DataManager.current_money)
 
 #on da button pressed: current_money - amount(=base_earn * lvl)
 #update money with new money amount
@@ -28,6 +28,19 @@ func earn(button_pressed: String) -> void:
 	var new_money = DataManager.current_money + amount
 	update_money(new_money)
 	
+
+func format_number(number: int) -> String:
+	var str_num = str(number)
+	var str_num_length = str_num.length()
+	var formated_str_num: String
+	
+	for idx in range(str_num_length):
+		if (str_num_length - idx) % 3 == 0 and idx > 0:
+			formated_str_num = str(formated_str_num, ".", str_num[idx])
+		else:
+			formated_str_num = str(formated_str_num, str_num[idx])
+	
+	return formated_str_num
 
 
 #on upgrade pressed: increase lvl in datamanager by 1, update upgrade_cost in datamanager , update current money

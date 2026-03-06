@@ -21,12 +21,12 @@ func _ready() -> void:
 	self.pressed.connect(update_cost_and_level_label)
 	self.pressed.connect(play_sound)
 	audio_stream_player.stream = DataManager.button_property[target_button]["sound"]
-	earn.text = "+ " + str(DataManager.button_property[target_button]["earn"])
+	earn.text = "+ " + root_node.format_number(DataManager.button_property[target_button]["earn"])
 
 
 func update_cost_and_level_label() -> void:
 	var new_cost: int = DataManager.button_property[target_button]["up_cost"]
-	cost.text = "Cost: " + str(new_cost)
+	cost.text = "Cost: " + root_node.format_number(new_cost)
 	var new_level: int =  DataManager.button_property[target_button]["lvl"]
 	level.text = "lvl: " + str(new_level)
 
